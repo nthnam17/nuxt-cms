@@ -1,0 +1,159 @@
+@for $i from 1 through 50 {
+    .fz-#{$i} {
+        &,
+        * {
+            font-size: #{$i}px !important;
+        }
+    }
+
+    .fs-#{$i} {
+        font-size: #{$i}px !important;
+    }
+}
+
+.limit-text {
+    text-overflow: ellipsis;
+    /* Needed to make it work */
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@for $i from 1 through 10 {
+    .limit-text-#{$i} {
+        display: -webkit-box;
+        -webkit-line-clamp: #{$i};
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
+
+.items-center {
+    display: flex;
+    align-items: center;
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+.primary {
+    background-color: var(--primary) !important;
+}
+
+.primary--text {
+    color: var(--primary) !important;
+}
+
+.gray {
+    background-color: var(--gray) !important;
+}
+
+.gray--text {
+    color: var(--gray) !important;
+}
+
+.information {
+    background-color: var(--information) !important;
+}
+
+.information--text {
+    color: var(--information) !important;
+}
+
+.error {
+    background-color: var(--error) !important;
+}
+
+.error--text {
+    color: var(--error) !important;
+}
+
+.warning {
+    background-color: var(--warning) !important;
+}
+
+.warning--text {
+    color: var(--warning) !important;
+}
+
+.success {
+    background-color: var(--success) !important;
+}
+.success--text {
+    color: var(--success) !important;
+}
+
+.ps {
+    .ps__rail-x {
+        display: none !important;
+    }
+
+    .ps__rail-y {
+        width: 8px !important;
+
+        &:hover {
+            width: 8px !important;
+        }
+
+        .ps__thumb-y {
+            width: 6px !important;
+            // background-color: var(--primary) !important;
+        }
+    }
+}
+
+.custom__table tbody tr:nth-of-type(even) {
+    font-size: 14px !important;
+    color: #1a1a1a !important ;
+    line-height: 20px !important;
+    font-weight: 400 !important;
+    background-color: #f6f6f6 !important;
+}
+
+.custom__table > .v-table__wrapper > table > thead > tr > th {
+    // box-shadow: inset 0 -1px 0 rgba(var(--v-border-color), var(--v-border-opacity)) !important;
+    box-shadow: unset !important;
+}
+
+.v-table.custom__table.v-table--fixed-header > .v-table__wrapper > table > thead > tr > th {
+    background-color: #f6f6f6 !important;
+    box-shadow: inset 0 -1px 0 rgba(var(--v-border-color), var(--v-border-opacity));
+    z-index: 1;
+}
+
+.custom__table > .v-table__wrapper > table > thead > tr > th {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: #858585 !important;
+    // text-align: center !important;
+    // border-right: 1px solid rgba(0, 0, 0, 0.12);
+    padding-left: 0;
+    padding-right: 0;
+    box-shadow: unset !important;
+    line-height: 18px !important;
+}
+.v-table__wrapper {
+    @include Responsive(SM) {
+        width: max-content;
+        overflow: auto;
+    }
+}
+.custom__table {
+    @include Responsive(SM) {
+        width: max-content;
+        overflow: auto;
+    }
+    .__th {
+        text-transform: uppercase;
+    }
+
+    .__tr {
+        height: 52px;
+        background-color: #f6f6f6 !important;
+    }
+}

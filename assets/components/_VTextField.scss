@@ -1,0 +1,47 @@
+// .v-text-field input {
+//     font-size: 0.875rem;
+// }
+// .v-field__outline {
+//     color: rgb(var(--v-theme-inputBorder), 0.5);
+// }
+// .inputWithbg {
+//     .v-field--variant-outlined {
+//         background-color: rgba(0, 0, 0, 0.025);
+//     }
+// }
+
+// Override the textfield's radius
+
+.v-text-field {
+    .v-field__outline__start {
+        border-radius: 10px 0 0 10px !important;
+    }
+    .v-field__outline__end {
+        border-radius: 0 10px 10px 0 !important;
+    }
+
+    .v-field--variant-solo {
+        box-shadow: none !important;
+        border: 1px solid #c0c0c0 !important;
+        border-radius: 10px !important;
+        // &:hover {
+        //     border: 1px solid #f88125 !important;
+        // }
+    }
+
+    // &:not(.v-text-field-focused.v-text-field-active) {
+    //     .v-field__field {
+    //         .v-field-label {
+    //             font-size: 15px !important;
+    //         }
+    //     }
+    // }
+
+    // &.v-text-field-active.v-text-field-focused {
+    //     .v-field__field {
+    //         .v-field-label {
+    //             font-size: 12px !important;
+    //         }
+    //     }
+    // }
+}
